@@ -1,0 +1,60 @@
+﻿@model eCatalogWebApplication.Models.Catalog
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Catalog</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NameCatalog)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NameCatalog)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SubCatalog)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SubCatalog)
+        </dd>
+    </dl>
+
+    <table class="table">
+    <thead>
+        <tr>
+            <th>
+                    @Html.DisplayNameFor(model => model.NameCatalog)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.SubCatalog)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @*    @foreach (var items in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => items.NameCatalog)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => items.SubCatalog)
+                     </td>
+                </tr>
+            }*@
+    </tbody>
+</table>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IDCatalog">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
